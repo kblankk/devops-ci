@@ -27,11 +27,11 @@ jobs:
                     context: .
                     file: ./Dockerfile
                     push: true
-                    tags: kblankk/devops-ci:latest
+                    tags: kawaoliveira/devops-ci:latest
 
                 - name: Azure WebApp
                   uses: Azure/webapps-deploy@v3.0.1
                   with:
                     app-name: kawaoliveira-devops-ci
                     publish-profile: ${{secrets.PUBLISH_PROFILE }}
-                    image: kblankk/devops-ci:latest
+                    image: kawaoliveira/devops-ci:latest
